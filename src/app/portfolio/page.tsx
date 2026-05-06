@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import { Code, BarChart3 } from 'lucide-react'
-import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 

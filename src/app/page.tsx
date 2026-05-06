@@ -68,8 +68,8 @@ export default function HomePage() {
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-meditation-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950" />
         {/* Decorative orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-200 dark:bg-primary-900/20 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-meditation-200 dark:bg-meditation-900/20 rounded-full blur-3xl opacity-30" />
+        <div aria-hidden="true" className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-200 dark:bg-primary-900/20 rounded-full blur-3xl opacity-30" />
+        <div aria-hidden="true" className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-meditation-200 dark:bg-meditation-900/20 rounded-full blur-3xl opacity-30" />
 
         <div className="relative section-container text-center py-24 pt-32">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400 mb-8 shadow-sm">
