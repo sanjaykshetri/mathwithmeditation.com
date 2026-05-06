@@ -10,6 +10,11 @@ function truncateToWords(text: string, wordLimit: number): string {
   return words.slice(0, wordLimit).join(' ') + '...'
 }
 
+function calculateReadTime(content: string): string {
+  const wordCount = content.split(/\s+/).length
+  return `${Math.ceil(wordCount / 200)} min read`
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -34,8 +39,7 @@ export function getAllPosts(): BlogPost[] {
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data, content } = matter(fileContents)
       
-      const wordCount = content.split(/\s+/).length
-      const readTime = `${Math.ceil(wordCount / 200)} min read`
+      const readTime = calculateReadTime(content)
       
       return {
         slug,
@@ -58,8 +62,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
     
-    const wordCount = content.split(/\s+/).length
-    const readTime = `${Math.ceil(wordCount / 200)} min read`
+    const readTime = calculateReadTime(content)
     
     return {
       slug,
