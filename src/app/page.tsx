@@ -41,22 +41,34 @@ const highlights = [
 
 const featuredProjects = [
   {
-    title: 'Misinformation Detection with NLP',
-    description: 'Deep learning pipeline for detecting fake news using transformer models and graph neural networks.',
-    tags: ['NLP', 'PyTorch', 'Transformers'],
-    href: '/portfolio#misinformation',
+    title: 'TrustShield',
+    description: 'AI platform for trust and risk analytics across fraud, reviews, and misinformation workflows.',
+    tags: ['Machine Learning', 'Risk Analytics', 'Product Engineering'],
+    href: '/portfolio#trustshield',
   },
   {
-    title: 'Math Anxiety & Mindfulness Study',
-    description: 'Data-driven analysis of how contemplative practices affect mathematical performance in students.',
-    tags: ['Data Science', 'Statistics', 'Education'],
-    href: '/portfolio#mindfulness',
+    title: 'Tentacles of Misinformation',
+    description: 'ML and NLP system for misinformation detection with explainable classification outputs.',
+    tags: ['NLP', 'Misinformation', 'Explainability'],
+    href: '/portfolio#tentacles',
   },
   {
-    title: 'Interactive Calculus Visualizer',
-    description: 'Real-time visual explorations of limits, derivatives, and integrals for intuitive learning.',
-    tags: ['JavaScript', 'Education', 'Visualization'],
-    href: '/teaching#visualizations',
+    title: 'Teacher Assistant Dashboard',
+    description: 'Education analytics platform for tracking student outcomes and early-risk detection.',
+    tags: ['Education Analytics', 'Dashboards', 'Early Warning'],
+    href: '/portfolio#teacher-assistant',
+  },
+  {
+    title: 'Emotion-Based Book Recommender',
+    description: 'NLP recommender system using semantic embeddings to map affective intent to book suggestions.',
+    tags: ['NLP', 'Embeddings', 'Recommendation Systems'],
+    href: '/portfolio#emotion-recommender',
+  },
+  {
+    title: 'Published Research',
+    description: 'Behavioral science work on face masks, first impressions, race, and time perception.',
+    tags: ['Behavioral Science', 'Research', 'Experimental Design'],
+    href: '/portfolio#published-research',
   },
 ]
 
@@ -78,15 +90,19 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            Math with{' '}
+            Sanjay{' '}
             <span className="bg-gradient-to-r from-primary-600 via-primary-500 to-meditation-600 dark:from-primary-400 dark:via-primary-300 dark:to-meditation-400 bg-clip-text text-transparent">
-              Meditation
+              Chhetri
             </span>
           </h1>
 
+          <p className="text-base md:text-lg font-semibold tracking-wide text-gray-600 dark:text-gray-300 mb-5 uppercase">
+            Data Scientist | Behavioral AI | Trust and Risk Analytics
+          </p>
+
           <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            Where mathematical rigor meets inner clarity. Explore data science, AI education,
-            teaching resources, and a contemplative approach to learning.
+            I build machine learning systems that combine mathematics, behavioral science,
+            NLP, and human-centered product thinking.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -147,7 +163,7 @@ export default function HomePage() {
             title="Selected Projects"
             description="Highlights from the intersection of mathematics, machine learning, and education."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project) => (
               <Link key={project.href} href={project.href}>
                 <Card className="p-6 h-full group cursor-pointer">
